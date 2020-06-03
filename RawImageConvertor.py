@@ -16,5 +16,7 @@ for file in os.listdir(image_folder):
 if thumb.format == rawpy.ThumbFormat.JPEG:
     f = open(f'{output_folder}/{base_name}.jpeg', 'wb')
     f.write(thumb.data)
+    print(f'{base_name} DONE')
 elif thumb.format == rawpy.ThumbFormat.BITMAP:
     imageio.imsave(f'{output_folder}/{base_name}.jpeg', thumb.data)
+    print(f'{base_name} DONE')
